@@ -1,0 +1,38 @@
+
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Canlı Mesajlaşma</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <div class="login" id="loginScreen">
+      <h2>Kullanıcı Adı Gir</h2>
+      <input type="text" id="username" placeholder="Kullanıcı adınızı yazın">
+      <button id="startChat">Sohbete Başla</button>
+    </div>
+
+    <div class="chat" id="chatScreen" style="display:none;">
+      <div class="header">
+        <span id="userDisplay"></span>
+        <div>
+          <button id="clearChat">🗑️ Temizle</button>
+          <button id="toggleMode">🌙</button>
+        </div>
+      </div>
+
+      <div class="messages" id="messages"></div>
+
+      <div class="inputArea">
+        <input type="text" id="messageInput" placeholder="Mesajınızı yazın...">
+        <button id="sendBtn">Gönder</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
