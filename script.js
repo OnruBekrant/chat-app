@@ -1,4 +1,3 @@
-
 let username = "";
 const loginScreen = document.getElementById("loginScreen");
 const chatScreen = document.getElementById("chatScreen");
@@ -9,6 +8,8 @@ const sendBtn = document.getElementById("sendBtn");
 const toggleModeBtn = document.getElementById("toggleMode");
 const toggleModeChatBtn = document.getElementById("toggleModeChat");
 const clearChatBtn = document.getElementById("clearChat");
+const fileInput = document.getElementById("fileInput");
+const uploadBtn = document.getElementById("uploadBtn");
 
 document.getElementById("startChat").addEventListener("click", startChat);
 document.getElementById("username").addEventListener("keypress", (e) => { if (e.key === "Enter") startChat(); });
@@ -86,27 +87,4 @@ clearChatBtn.addEventListener("click", () => {
 });
 
 function broadcastMessage(message) {
-  localStorage.setItem("chatMessage", JSON.stringify(message));
-}
-
-window.addEventListener("storage", (e) => {
-  if (e.key === "chatMessage") {
-    const message = JSON.parse(e.newValue);
-    if (message && message.user !== username) {
-      saveMessage(message);
-      displayMessage(message, false);
-    }
-  }
-});
-
-// Gece modu butonu
-toggleModeBtn.addEventListener("click", () => {
-  document.body.classList.toggle("dark");
-  toggleModeBtn.textContent = document.body.classList.contains("dark") ? "☀️" : "🌙";
-});
-
-// Sohbet ekranındaki gece modu butonu
-toggleModeChatBtn.addEventListener("click", () => {
-  document.body.classList.toggle("dark");
-  toggleModeChatBtn.textContent = document.body.classList.contains("dark") ? "☀️" : "🌙";
-});
+  localStorage.setItem("chatMessag

@@ -1,12 +1,13 @@
-
 <!DOCTYPE html>
 <html lang="tr">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Canlı Mesajlaşma</title>
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
   <div class="container">
     <!-- Giriş Ekranı -->
@@ -14,7 +15,7 @@
       <h2>Kullanıcı Adı Gir</h2>
       <input type="text" id="username" placeholder="Kullanıcı adınızı yazın">
       <button id="startChat">Sohbete Başla</button>
-      <button id="toggleMode">🌙</button> <!-- Gece modu butonu ekledik -->
+      <button id="toggleMode">🌙</button>
     </div>
 
     <!-- Sohbet Ekranı -->
@@ -23,7 +24,7 @@
         <span id="userDisplay"></span>
         <div>
           <button id="clearChat">🗑️ Temizle</button>
-          <button id="toggleModeChat">🌙</button> <!-- Gece modu butonu burada da olacak -->
+          <button id="toggleModeChat">🌙</button>
         </div>
       </div>
 
@@ -32,10 +33,13 @@
       <div class="inputArea">
         <input type="text" id="messageInput" placeholder="Mesajınızı yazın...">
         <button id="sendBtn">Gönder</button>
+        <input type="file" id="fileInput" accept="image/*,video/*,.pdf,.doc,.docx,.txt" style="display:none;">
+        <button id="uploadBtn">Fotoğraf/Video/Yükle</button>
       </div>
     </div>
   </div>
 
   <script src="script.js"></script>
 </body>
+
 </html>
