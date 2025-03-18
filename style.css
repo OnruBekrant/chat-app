@@ -1,16 +1,21 @@
 
-body { font-family: Arial, sans-serif; background: #f0f0f0; color: #333; margin: 0; padding: 0; }
+body { font-family: Arial, sans-serif; background: #f0f0f0; color: #333; margin: 0; padding: 0; transition: background 0.3s, color 0.3s; }
 .container { max-width: 600px; margin: auto; padding: 20px; }
 .login, .chat { background: #fff; padding: 20px; border-radius: 10px; }
 input[type="text"] { width: 80%; padding: 10px; border-radius: 5px; border: 1px solid #ccc; }
 button { padding: 10px 15px; border-radius: 5px; border: none; cursor: pointer; background: #007bff; color: #fff; }
 button:hover { background: #0056b3; }
-.messages { height: 300px; overflow-y: auto; border: 1px solid #ccc; padding: 10px; background: #fafafa; margin: 15px 0; border-radius: 5px; }
+.messages { height: 300px; overflow-y: auto; border: 1px solid #ccc; padding: 10px; background: #fafafa; margin: 15px 0; border-radius: 5px; color: #000; }
 .message { margin-bottom: 10px; padding: 8px; border-radius: 5px; }
-.own { background-color: #d1e7dd; }
-.other { background-color: #f8d7da; }
+.own { background-color: #d1e7dd; color: #000; }
+.other { background-color: #f8d7da; color: #000; }
 .dark { background-color: #121212; color: #e0e0e0; }
-.dark .chat, .dark .login { background-color: #1e1e1e; }
-.dark .messages { background-color: #2c2c2c; }
+.dark .chat, .dark .login { background-color: #1e1e1e; color: #e0e0e0; }
+.dark input[type="text"] { background-color: #333; color: #e0e0e0; border-color: #555; }
+.dark button { background-color: #444; color: #fff; }
+.dark button:hover { background-color: #666; }
+.dark .messages { background-color: #2c2c2c; color: #e0e0e0; }
+.dark .own { background-color: #375d4f; color: #e0e0e0; }
+.dark .other { background-color: #663f42; color: #e0e0e0; }
 .header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px; }
 .inputArea { display: flex; gap: 10px; }
