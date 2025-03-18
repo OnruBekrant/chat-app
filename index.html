@@ -9,18 +9,21 @@
 </head>
 <body>
   <div class="container">
+    <!-- Giriş Ekranı -->
     <div class="login" id="loginScreen">
       <h2>Kullanıcı Adı Gir</h2>
       <input type="text" id="username" placeholder="Kullanıcı adınızı yazın">
       <button id="startChat">Sohbete Başla</button>
+      <button id="toggleMode">🌙</button> <!-- Gece modu butonu ekledik -->
     </div>
 
+    <!-- Sohbet Ekranı -->
     <div class="chat" id="chatScreen" style="display:none;">
       <div class="header">
         <span id="userDisplay"></span>
         <div>
           <button id="clearChat">🗑️ Temizle</button>
-          <button id="toggleMode">🌙</button>
+          <button id="toggleModeChat">🌙</button> <!-- Gece modu butonu burada da olacak -->
         </div>
       </div>
 

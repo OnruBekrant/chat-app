@@ -7,6 +7,7 @@ const messagesDiv = document.getElementById("messages");
 const messageInput = document.getElementById("messageInput");
 const sendBtn = document.getElementById("sendBtn");
 const toggleModeBtn = document.getElementById("toggleMode");
+const toggleModeChatBtn = document.getElementById("toggleModeChat");
 const clearChatBtn = document.getElementById("clearChat");
 
 document.getElementById("startChat").addEventListener("click", startChat);
@@ -98,7 +99,14 @@ window.addEventListener("storage", (e) => {
   }
 });
 
+// Gece modu butonu
 toggleModeBtn.addEventListener("click", () => {
   document.body.classList.toggle("dark");
   toggleModeBtn.textContent = document.body.classList.contains("dark") ? "☀️" : "🌙";
+});
+
+// Sohbet ekranındaki gece modu butonu
+toggleModeChatBtn.addEventListener("click", () => {
+  document.body.classList.toggle("dark");
+  toggleModeChatBtn.textContent = document.body.classList.contains("dark") ? "☀️" : "🌙";
 });
